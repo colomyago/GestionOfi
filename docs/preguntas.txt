@@ -1,16 +1,16 @@
 1- Redacción de propuesta de proyectos con descripción y objetivos.
 2-Delimitar alcance (inclusiones / exclusiones) y supuestos / restricciones.
-3-Identificación de interesados y su impacto 
+3-Identificación de interesados y su impacto
 4-Definición de criterios de aceptación verificables para 2-3 funciones nucleo.
 1.1 - Contexto / problema
 
 Las empresas y oficinas suelen gestionar su equipamiento de forma manual (planillas Excel, papeles, comunicación informal). Esto provoca:
 
-Pérdida de tiempo en la búsqueda de insumos.
+-Pérdida de tiempo en la búsqueda de insumos.
 
-Dificultad para controlar el stock real.
+-Dificultad para controlar el stock real.
 
-Extravio de equipos por falta de trazabilidad.
+-Extravio de equipos por falta de trazabilidad.
 
 Sobrecostos al no predecir consumos.
 
