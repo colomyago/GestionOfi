@@ -52,19 +52,19 @@ Predicciones avanzadas de mantenimiento (se incluirán en fases posteriores).
 
 MVP (mínimo producto viable): CRUDs completos, gestión de stock y reportes básicos.
 
-Entrega intermedia: documentación técnica + diagramas UML.
+-Entrega intermedia: documentación técnica + diagramas UML.
 
-Entrega final: sistema en contenedores Docker listo para desplegar.
+-Entrega final: sistema en contenedores Docker listo para desplegar.
 
 1.5- Interesados clave
 
-Administrador: alto impacto, usa el sistema a diario para gestionar equipos.
+-Administrador: alto impacto, usa el sistema a diario para gestionar equipos.
 
-Supervisor: impacto medio, consulta reportes para tomar decisiones.
+-Supervisor: impacto medio, consulta reportes para tomar decisiones.
 
-Empleado: impacto bajo, solicita y devuelve equipos.
+-Empleado: impacto bajo, solicita y devuelve equipos.
 
-Profesor / Cliente: impacto alto, evalúa el éxito del proyecto.
+-Profesor / Cliente: impacto alto, evalúa el éxito del proyecto.
 
 1.6 - Supuestos y restricciones
 
