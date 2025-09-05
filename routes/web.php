@@ -31,6 +31,15 @@ Route::post('/users', function (Request $request) {
         'name' => 'required|string|max:255',
         'email' => 'required|email|unique:users',
         'password' => 'required|min:8'
+    ], [
+        'name.required' => 'El campo nombre es obligatorio',
+        'name.string' => 'El nombre debe ser texto',
+        'name.max' => 'El nombre no puede tener más de 255 caracteres',
+        'email.required' => 'El campo email es obligatorio',
+        'email.email' => 'El email debe ser una dirección válida',
+        'email.unique' => 'Este email ya está registrado',
+        'password.required' => 'La contraseña es obligatoria',
+        'password.min' => 'La contraseña debe tener al menos 8 caracteres'
     ]);
 
     $validated['password'] = bcrypt($validated['password']);
