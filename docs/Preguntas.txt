@@ -134,7 +134,7 @@ Plataforma: uso desde navegador en PC (responsive, pero no app nativa).
 
 2.4 - ¿De qué dependemos? ¿Quién lo provee y cuándo?
 
-Datos: se cargarán al inicio mediante seeders de prueba y luego manualmente por los admins.
+Datos: se cargarán al inicio manualmente y luego por los clientes.
 
 Entorno: Docker y MySQL que configuramos nosotros.
 
