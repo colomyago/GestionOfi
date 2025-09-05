@@ -9,7 +9,7 @@
 <body class="bg-gray-100 flex items-center justify-center h-screen">
 
     <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-lg">
-        <h1 class="text-2xl font-bold mb-4">Gemini Chat</h1>
+        <h1 class="text-2xl font-bold mb-4">Chat con gemini</h1>
 
         <div class="flex gap-2 mb-4">
             <input type="text" id="prompt" placeholder="Escribe tu prompt..."

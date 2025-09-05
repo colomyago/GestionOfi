@@ -37,7 +37,7 @@ Route::post('/users', function (Request $request) {
     User::create($validated);
 
     return redirect()->route('users.index')
-        ->with('success', 'User created successfully');
+        ->with('success', 'Usuario creado exitosamente.');
 })->name('users.store');
 
 Route::get('/geminiTest', function () {

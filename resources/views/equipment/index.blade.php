@@ -39,7 +39,19 @@
                                     <td>{{ $item->description }}</td>
                                     <td>
                                         <span class="badge bg-{{ $item->status === 'Available' ? 'success' : ($item->status === 'In Use' ? 'primary' : 'warning') }}">
-                                            {{ $item->status }}
+                                            @switch($item->status)
+                                                @case('Available')
+                                                    Disponible
+                                                    @break
+                                                @case('In Use')
+                                                    En Uso
+                                                    @break
+                                                @case('Maintenance')
+                                                    En Mantenimiento
+                                                    @break
+                                                @default
+                                                    {{ $item->status }}
+                                            @endswitch
                                         </span>
                                     </td>
                                     <td>{{ $item->user ? $item->user->name : 'Sin asignar' }}</td>
