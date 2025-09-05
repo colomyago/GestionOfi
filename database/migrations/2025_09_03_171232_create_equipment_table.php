@@ -14,8 +14,12 @@ return new class extends Migration
         Schema::create('equipment', function (Blueprint $table) {
             $table->id();
             $table->string('name');   // Nombre del equipo
-            $table->string('type');   // Tipo: computadora, mobiliario, etc.
-            $table->integer('stock'); // Cantidad en stock
+            $table->text('description')->nullable(); // Descripción del equipo
+            $table->string('status'); // Estado del equipo
+            $table->foreignId('user_id') // Relación con la tabla de usuarios
+                  ->nullable()
+                  ->constrained()
+                  ->onDelete('set null');
             $table->timestamps();
         });
     }
