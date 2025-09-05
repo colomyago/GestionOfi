@@ -5,6 +5,7 @@ use App\Models\User;
 use App\Models\Equipment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\GeminiController;
+use App\Http\Controllers\EquipmentController;
 
 
 Route::get('/', function () {
@@ -12,31 +13,7 @@ Route::get('/', function () {
 });
 
 // Equipment Routes
-Route::get('/equipment', function () {
-    return view('equipment.index', [
-        'equipment' => Equipment::with('user')->get()
-    ]);
-})->name('equipment.index');
-
-Route::get('/equipment/create', function () {
-    return view('equipment.create', [
-        'users' => User::all()
-    ]);
-})->name('equipment.create');
-
-Route::post('/equipment', function (Request $request) {
-    $validated = $request->validate([
-        'name' => 'required|string|max:255',
-        'description' => 'nullable|string',
-        'status' => 'required|string',
-        'user_id' => 'nullable|exists:users,id'
-    ]);
-
-    Equipment::create($validated);
-
-    return redirect()->route('equipment.index')
-        ->with('success', 'Equipment created successfully');
-})->name('equipment.store');
+Route::resource('equipment', EquipmentController::class);
 
 // User Routes
 Route::get('/users', function () {

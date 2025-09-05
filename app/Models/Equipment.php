@@ -13,7 +13,9 @@ class Equipment extends Model
         'name',
         'description',
         'status',
-        'user_id'
+        'user_id',
+        'fecha_prestado',
+        'fecha_devolucion'
     ];
 
     public function user()

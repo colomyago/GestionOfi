@@ -20,6 +20,8 @@ return new class extends Migration
                   ->nullable()
                   ->constrained()
                   ->onDelete('set null');
+            $table->date('fecha_prestado')->nullable();    // Fecha de préstamo
+            $table->date('fecha_devolucion')->nullable();  // Fecha de devolución
             $table->timestamps();
         });
     }
