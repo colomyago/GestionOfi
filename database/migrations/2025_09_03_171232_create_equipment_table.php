@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');   // Nombre del equipo
             $table->text('description')->nullable(); // Descripción del equipo
-            $table->string('status'); // Estado del equipo
+            $table->string('status')->default('active'); // Estado del equipo
             $table->foreignId('user_id') // Relación con la tabla de usuarios
                   ->nullable()
                   ->constrained()

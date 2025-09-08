@@ -23,55 +23,41 @@
 
                 <form action="{{ route('equipment.store') }}" method="POST">
                     @csrf
+
                     <div class="mb-3">
                         <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
+                        <input type="text" class="form-control" id="name" name="name" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="description" class="form-label">Descripción</label>
-                        <textarea class="form-control" id="description" name="description">{{ old('description') }}</textarea>
+                        <textarea class="form-control" id="description" name="description"></textarea>
                     </div>
 
                     <div class="mb-3">
-                        <label for="status" class="form-label">Estado</label>
-                        <select class="form-control" id="status" name="status" required>
-                            <option value="Available">Disponible</option>
-                            <option value="In Use">En Uso</option>
-                            <option value="Maintenance">En Mantenimiento</option>
-                            <option value="Out of Service">Fuera de Servicio</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="user_id" class="form-label">Asignar a Usuario</label>
+                        <label for="user_id" class="form-label">Usuario</label>
                         <select class="form-control" id="user_id" name="user_id">
-                            <option value="">Seleccionar Usuario</option>
-                            @foreach($users as $user)
+                            <option value="">-- Seleccionar usuario --</option>
+                            @foreach ($users as $user)
                                 <option value="{{ $user->id }}">{{ $user->name }}</option>
                             @endforeach
                         </select>
                     </div>
 
+                    {{-- Nuevo campo STATUS --}}
                     <div class="mb-3">
-                        <label for="fecha_prestado" class="form-label">Fecha y Hora de Préstamo</label>
-                        <input type="datetime-local" class="form-control" id="fecha_prestado" name="fecha_prestado" value="{{ old('fecha_prestado') }}">
+                        <label for="status" class="form-label">Estado</label>
+                        <select name="status" id="status" class="form-control" required>
+                            <option value="active">Activo</option>
+                            <option value="inactive">Inactivo</option>
+                        </select>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="fecha_devolucion" class="form-label">Fecha y Hora de Devolución</label>
-                        <input type="datetime-local" class="form-control" id="fecha_devolucion" name="fecha_devolucion" value="{{ old('fecha_devolucion') }}">
-                    </div>
-
-                    <div class="d-flex justify-content-end gap-2">
-                        <a href="{{ route('equipment.index') }}" class="btn btn-secondary">Cancelar</a>
-                        <button type="submit" class="btn btn-primary">Guardar Equipo</button>
-                    </div>
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <a href="{{ route('equipment.index') }}" class="btn btn-secondary">Cancelar</a>
                 </form>
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
