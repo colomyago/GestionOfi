@@ -53,5 +53,3 @@ Route::get('/geminiTest', function () {
     return view('geminiTest');
 });
 
-Route::get('/gemini', [GeminiController::class, 'index']);
-Route::post('/gemini', [GeminiController::class, 'chat']);

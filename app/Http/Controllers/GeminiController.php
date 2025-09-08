@@ -19,6 +19,7 @@ class GeminiController extends Controller
         return view('index'); //Retorna la vista index.blade.php
     }
 
+
     public function chat(Request $request)
     {
         try {

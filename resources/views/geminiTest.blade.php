@@ -30,7 +30,7 @@
             // Agregar el mensaje del usuario
             addMessage('Tú', prompt, 'bg-gray-100');
 
-            fetch('/gemini', {
+            fetch('/api/gemini', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
